@@ -1,7 +1,7 @@
- const accountId = 1234;
- let accountEmail ="Neeraj@hook.com";
- var accountPassword = "28427";
- accountCity = "gorakhpur";
+const accountId = 1234;
+let accountEmail ="Neeraj@hook.com";
+var accountPassword = "28427";
+accountCity = "gorakhpur";
 let accountState;
 //  accountId = 1245    //not allowed
 
