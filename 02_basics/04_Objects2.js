@@ -56,21 +56,56 @@ const users = [
 
 
 
-console.log(users[1].email);
+// console.log(users[1].email);
 
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
-console.log(tinderUser.hasOwnProperty('isLogged'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLogged'));
 
 
+
+// ****************Object De-structure and JSON API INTRO ******************
+
+
+
+const course = {
+    name:"js in Hindi",
+    price: "999",
+    courseInstructor:"hitesh"
+}
+
+
+//course.courseinstructor
+
+const {courseInstructor : instructor} = course  // de-structuring here  the  object key
+
+console.log(instructor)
+
+
+// *******JSON*******-
+
+// json are in arrays also
+
+// {
+//     "name":"Neeraj",
+//     "coursename":"js in hindi",                // objects are contain in variables but json are not .
+//     "price":"free"
+// }
+
+
+[
+    {},
+    {},
+    {}
+]
 
 
 
