@@ -49,7 +49,46 @@ function loginUserMessage(username){
    return `${username} just logged in`
 }
 
-console.log(loginUserMessage());
+// console.log(loginUserMessage());
+
+
+//function objects and arrays ************************************
+
+
+function calculateCartPeice(val1,val2,...num1){
+   return num1
+}
+
+
+ console.log(calculateCartPeice(562,8400,3498,28,));
+
+
+
+ const user = {
+        username:"Neeraj",
+        price:398
+
+ }
+
+ function handleObject(anyobject){
+     console.log(`The usename is ${anyobject.username} and the price is ${anyobject.price} .`);
+ }
+
+//  handleObject(user)
+ handleObject({
+     username:"hitesh",           //other way
+     price:300
+ })
+
+
+ const myNewArray = [299,399,599,500,200]
+
+ function returnSecondValue(getArray){
+      return getArray[1]
+ }
+
+//  console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([299,399,599,500,200]))          //other way
 
 
  
