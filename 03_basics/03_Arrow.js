@@ -32,7 +32,7 @@ const user = {
 
     // const addTwo = (num1,num2) =>  num1 + num2        or                               // Implisit Arrow function
     // const addTwo = (num1,num2) => ( num1 + num2 )                                      // Implisit Arrow function
-    const addTwo = (num1,num2) => ( {username:"hitesh"}                                   // Implisit Arrow function
+    const addTwo = (num1,num2) => ( {username:"hitesh"})                           // Implisit Arrow function
     
 
     console.log(addTwo(3,5))
