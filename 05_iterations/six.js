@@ -44,4 +44,12 @@ const books = [
 
   // solve the this for some conditions for example based  subjet of history or science and publish years etc
 
+//   const  myBooks = books.filter( (bk) => bk.genre === 'History')
+//   console.log(myBooks );
+  
+
+  const userBooks = books.filter( (bk) => {
+    return bk.publish >= 1980 && bk.genre=== 'Non-Fiction'})
+  
+  console.log(userBooks);
   
