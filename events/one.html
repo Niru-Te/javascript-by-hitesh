@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+<h1>Amazing image</h1>
+<div>
+
+    <ul id="images">
+        <li><img id="photoshop" src="https://t4.ftcdn.net/jpg/03/19/26/21/240_F_319262178_nItWSytiYPh8sBjTgUrN5VNwZVkV0eed.jpg" height="100px" alt="photoshop"></li>
+        <li><img id="japan" src="https://t3.ftcdn.net/jpg/00/47/34/02/240_F_47340232_J9TOyhtA0NDzADQjISK2dpDZ1bLbY2qh.jpg" height="100px" alt="deer"></li>
+        <li><img id="nuture" src="https://t4.ftcdn.net/jpg/03/19/26/21/240_F_319262178_nItWSytiYPh8sBjTgUrN5VNwZVkV0eed.jpg" height="100px" alt="zebra"></li>
+        <li><img id="india" src="https://t3.ftcdn.net/jpg/00/47/34/02/240_F_47340232_J9TOyhtA0NDzADQjISK2dpDZ1bLbY2qh.jpg" height="100px" alt="photoshop"></li>
+        <li><a style="color: aliceblue;" id="google" href="www.google.com">google</a></li>
+        
+    </ul>
+
+
+</div>
+
+</body>
+<script>
+//    document.getElementById('japan').onclick = function (){
+//     alert("this is Deer")                                             //this is not a good practice
+//    }
+
+// document.getElementById('images').addEventListener('click',function(e){
+//     console.log('click in the ul');
+    
+// },false)
+// document.getElementById('japan').addEventListener('click',function(e){
+//     console.log('clicked deer');
+//     e.stopPropagation()
+    
+// },false)
+
+//if you want to doesn't open the link
+
+// document.getElementById('google').addEventListener('click',function(e){
+//     e.preventDefault()
+//     e.stopPropagation()
+//     console.log("google clicked");
+    
+// })
+
+// removing element from click on the element from output
+
+
+document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+
+        if(e.target.tagName === "IMG"){
+            console.log(e.target.id);
+            
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+
+},false)
+
+//Removing image from getElementById 
+
+document.getElementById('images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+
+        if(e.target.tagName === "IMG"){
+            console.log(e.target.id);
+            
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+
+},false)
+
+
+//removeIt.parentNode.removechild(removeIt)
+</script>
+</html>
