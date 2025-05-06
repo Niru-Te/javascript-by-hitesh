@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure and Lexical scoping </title>
+</head>
+<button id="orange">orange</button>
+<button id="green">green</button>
+<body>
+    
+</body>
+<script>
+    //Lexical Scoping
+
+    function outer(){
+         let username = "hitesh";
+         console.log(name);  // parent function does not access the child var
+         
+         function inner(){
+            let name = "Neeraj"
+            console.log(username);
+            
+         }
+         function innerTwo(){
+            
+            console.log(username);
+            
+         }
+         inner()
+         innerTwo()
+    }
+    outer()
+    // console.log(username); // 
+    
+
+    // Closure  ** if you return the function not return the function which whole  lexical scope is return 
+  
+    function closure (){
+         let username = "MOZILA";
+         function innerClosure(){
+            console.log(username);
+            
+         }
+         return innerClosure;
+    }
+
+    const fun = closure();      // in closure  you remove the functional exicution contex but memory refrence rol come here
+    fun()    // output => MOZILA 
+
+
+</script>
+<script>
+   // normal approach for changing bg color;
+                //  document.getElementById('orange').onclick = function(){
+                //     document.body.style.backgroundColor =  'orange'
+                //  }
+                //  document.getElementById('green').onclick = function(){
+                //     document.body.style.backgroundColor =  'green'
+                //  }
+
+ // if 100 buttons and color 
+ // using closure
+
+ function clickHandler(color){
+    // document.body.style.backgroundColor =  `${color}`
+
+    return function(){
+        document.body.style.backgroundColor =  `${color}`
+    }
+ }
+
+ document.getElementById('orange').onclick = clickHandler('orange')
+ document.getElementById('green').onclick = clickHandler('green')
+
+</script>
+</html>
